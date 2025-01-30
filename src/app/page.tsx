@@ -1,4 +1,4 @@
-export default function Home() {
+export default function Navbar() {
   return (
     <div>
       <h1>Home</h1>
