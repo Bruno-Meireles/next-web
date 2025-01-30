@@ -4,7 +4,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <div>
-      <nav className="fixed top-0 w-full flex items-center py-4 px-8 justify-between  bg-slate-800 text-white">
+      <nav className="fixed z-50 top-0 w-full flex items-center py-4 px-8 justify-between  bg-slate-800 text-white">
         <Link
           href="/"
           className="uppercase font-bold text-md h-12 flex items-center"
@@ -13,8 +13,8 @@ const Navbar = () => {
         </Link>
         <ul className="flex justify-center items-center w-11/12 gap-4  ">
           <li>Home</li>
+          <li>Produtos</li>
           <li>Contato</li>
-          <li>About</li>
         </ul>
         <ul>
      
