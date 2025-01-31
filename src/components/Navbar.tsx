@@ -1,3 +1,4 @@
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import React from "react";
 
@@ -12,13 +13,26 @@ const Navbar = () => {
           <div> Next Store</div>
         </Link>
         <ul className="flex justify-center items-center w-11/12 gap-4  ">
-          <li>Home</li>
-          <li>Produtos</li>
-          <li>Contato</li>
+          <Link href="/">
+            <li>Home</li>
+          </Link>
+          <Link href="/products">
+            <li>Produtos</li>
+          </Link>
+          <Link href="/contact">
+            <li>Contato</li>
+          </Link>
         </ul>
-        <ul>
-     
-        </ul>
+
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+
+        <SignedOut>
+          <SignInButton mode="modal">
+            <button  className="bg-teal-600 hover:bg-slate-600 text-white font-bold py-2 px-4 rounded text-sm p-5 text-center">Entrar</button>
+          </SignInButton>
+        </SignedOut>
       </nav>
     </div>
   );
